@@ -37,7 +37,6 @@ public class RachunekBezKredytowy
         blokadaWszystkichRachunkowWBanku=true;
     }
 
-
     public String getNumerRachunku() {
         return numerRachunku;
     }
