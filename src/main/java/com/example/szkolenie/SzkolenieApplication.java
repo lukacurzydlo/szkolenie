@@ -1,6 +1,9 @@
 package com.example.szkolenie;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static java.lang.Boolean.TRUE;
 
 public class SzkolenieApplication {
@@ -27,6 +30,22 @@ public class SzkolenieApplication {
         Integer number = 42; // Automatyczne opakowanie int w Integer
         int value = number;
         System.out.println(value);
+
+
+
+
+//
+
+
+
+
+
+        Polimorfizm polimorfizm= new Polimorfizm();
+        List<InterfaceRachunek>  interfaceRachunekList= new ArrayList<>();
+        interfaceRachunekList.add(new RachunekFirmowy());
+        interfaceRachunekList.add(new RachunekOsobisty());
+        polimorfizm.wyswietlRodzajRachunku(interfaceRachunekList);
+
 
     }
 
