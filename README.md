@@ -4,12 +4,14 @@ New branch
 BD + requesty bankowe
 gradle taski,Maven,importy
 Historia Java,co doszlo w wersjach
+main , c++, jezyki nieobiektowe
+Klasy
+Obiekty
 Typy danych
 Operacje na zmiennych
 Operatory
 Funkcje
-Klasy
-Obiekty
+listy,mapy,sety
 Java oraz JVM
 Mikroserwisy, a systemy legacy/monolity
 Cloud

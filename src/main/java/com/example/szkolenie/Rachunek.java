@@ -3,7 +3,7 @@ package com.example.szkolenie;
 
 import java.util.Objects;
 
-public class Rachunek  {
+public class Rachunek {
 
     private static boolean blokadaWszystkichRachunkowWBanku;
     private String numerRachunku;
@@ -14,42 +14,37 @@ public class Rachunek  {
         this.stanKonta = stanKonta;
     }
 
-    public void wykonajPrzelew(int wartoscPrzelewu){
-//        if(blokadaWszystkichRachunkowWBanku){
-//            System.out.println("Wszystkie rachunki w banku sa zablokowane, wykonanie przelewu jest niemozliwe");
-//            return;
-//        }
-
-        if(wartoscPrzelewu>stanKonta){
-            System.out.println("Przelew odrzucony z uwagi na zbyt malo srodkow");
+    public void wykonajPrzelewWychodzacy(int wartoscPrzelewu) {
+        if(blokadaWszystkichRachunkowWBanku){
+            System.out.println("Wszystkie rachunki w banku sa zablokowane, wykonanie przelewu jest niemozliwe");
+            return;
         }
-        else{
-            stanKonta =stanKonta-wartoscPrzelewu;
-            System.out.println("Przelew wykonany, na koncie zostalo "+stanKonta);
+
+        if (wartoscPrzelewu > stanKonta) {
+            System.out.println("Przelew odrzucony z uwagi na zbyt malo srodkow");
+        } else {
+            stanKonta = stanKonta - wartoscPrzelewu;
+            System.out.println("Przelew wykonany, na koncie zostalo " + stanKonta);
         }
 
     }
 
-  //  public static void zablokujWszystkieRachunkiWBanku(){
-//        blokadaWszystkichRachunkowWBanku=true;
-//    }
+      public static void zablokujWszystkieRachunkiWBanku(){
+        blokadaWszystkichRachunkowWBanku=true;
+    }
+
+    public void doladujKontoOkreslonaSumaPieniedzy(int kwota) {
+        stanKonta = stanKonta + kwota;
+    }
 
     public String getNumerRachunku() {
         return numerRachunku;
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
+    public int getStanKonta() {
+        return stanKonta;
+    }
 
 
     @Override

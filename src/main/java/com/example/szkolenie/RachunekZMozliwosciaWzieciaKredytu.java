@@ -3,30 +3,22 @@ package com.example.szkolenie;
 
 public class RachunekZMozliwosciaWzieciaKredytu extends Rachunek {
 
-    private int przydzielonyKredytLimitu;
+    private int przydzielonyLimitKredytu;
     private int wzietyKredyt;
 
-    public RachunekZMozliwosciaWzieciaKredytu(String numerRachunku, int stanKonta, int przydzielonyKredytLimitu) {
+    public RachunekZMozliwosciaWzieciaKredytu(String numerRachunku, int stanKonta, int przydzielonyLimitKredytu) {
         super(numerRachunku, stanKonta);
-        przydzielonyKredytLimitu = przydzielonyKredytLimitu;
-    }
-
-    public int getPrzydzielonyKredytLimitu() {
-        return przydzielonyKredytLimitu;
-    }
-
-    public void setPrzydzielonyKredytLimitu(int przydzielonyKredytLimitu) {
-        this.przydzielonyKredytLimitu = przydzielonyKredytLimitu;
+        this.przydzielonyLimitKredytu = przydzielonyLimitKredytu;
     }
 
     public void dodajNowyKredyt(int wartoscNowegoKredytu){
-       int  calkowityKredyt=wzietyKredyt+wartoscNowegoKredytu;
-        if(calkowityKredyt>przydzielonyKredytLimitu){
+       int  nowaWartoscKredytu=this.wzietyKredyt+wartoscNowegoKredytu;
+        if(nowaWartoscKredytu>przydzielonyLimitKredytu){
             System.out.println("Nie mozna wziac nowego kredytu poniewaz przekroczony zotal limit");
         }
         else{
-            System.out.println("Po wzieciu nowego kredytu calkowity kredyt wynosi : "+calkowityKredyt);
-            wzietyKredyt=calkowityKredyt;
+            System.out.println("Po wzieciu nowego kredytu calkowity kredyt wynosi : "+nowaWartoscKredytu);
+            this.wzietyKredyt=nowaWartoscKredytu;
         }
     }
 }
