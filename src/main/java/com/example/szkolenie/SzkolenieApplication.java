@@ -9,6 +9,7 @@ import static java.lang.Boolean.TRUE;
 public class SzkolenieApplication {
     public static void main(String[] args) {
 
+        // zmiany
         char itemFirstCharacter = 'i';
         System.out.println(itemFirstCharacter);
 
